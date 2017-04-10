@@ -1,0 +1,16 @@
+remark #6375 Because of COMMON, the alignment of object is inconsistent with its type
+          2. http://blog.sciencenet.cn/blog-282515-387725.html
+		  
+		  
+Compiling Fortran...
+D:\FRAME2D.FOR
+D:\FRAME2D.FOR(314) : Warning: Because of COMMON, the alignment of object is inconsistent with its type   [ASA] COMMON /EM/LM(6),ND,ASA(6,6),RF(6),SA(6,6) --------------------------^
+D:\FRAME2D.FOR(314) : Warning: Because of COMMON, the alignment of object is inconsistent with its type   [RF] COMMON /EM/LM(6),ND,ASA(6,6),RF(6),SA(6,6) ---------------------------^
+     
+
+COMMON /EM/LM(6),ND,ASA(6,6),RF(6),SA(6,6),SF(6),T(3,3)
+
+
+
+
+		  
