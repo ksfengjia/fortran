@@ -1,16 +1,29 @@
 remark #6375 Because of COMMON, the alignment of object is inconsistent with its type
+Fortran中common域内字节对齐问题
+相关链接: 1. https://software.intel.com/zh-cn/node/517976
           2. http://blog.sciencenet.cn/blog-282515-387725.html
 		  
 		  
+最近，好几个人问到公共块出错的问题，都是出于一个原因，特在这里把老贴整理一下供大家参考。
+问题：  20924057
 Compiling Fortran...
 D:\FRAME2D.FOR
 D:\FRAME2D.FOR(314) : Warning: Because of COMMON, the alignment of object is inconsistent with its type   [ASA] COMMON /EM/LM(6),ND,ASA(6,6),RF(6),SA(6,6) --------------------------^
 D:\FRAME2D.FOR(314) : Warning: Because of COMMON, the alignment of object is inconsistent with its type   [RF] COMMON /EM/LM(6),ND,ASA(6,6),RF(6),SA(6,6) ---------------------------^
      
 
+解答：
+这是老Fortran的规则。看你的公共语句：
 COMMON /EM/LM(6),ND,ASA(6,6),RF(6),SA(6,6),SF(6),T(3,3)
 
+根据程序的隐含规则，LM(6),ND一共是7个整型数，每个整型数4个字节，共28个字节，不是8字节的整倍数。
+紧跟着是双精度的ASA(6,6)，每个数是8个字节，可是ASA(1,1)不能从8字节整倍数位置开始存储，
+这就是the alignment of object is inconsistent with its type 的意思。
 
+对于警告错误，可以忽略，一般不致于影响执行结果。如果要改的话，有几种办法：
 
+1）在公共语句中，把双精度数放在前边，整形数跟在后边；
+2）在ASA()前插一个整型变量（哪怕是没用的），用来占用4个字节，以使得后面的双精度数可以从8字节整数倍位置开始存储。
 
+准则：作为好的编程习惯，建议在公共块中，把实型变量排在前边，把整型数据放在后边，就不会有对位不整的错误！
 		  
