@@ -1,0 +1,25 @@
+GetProcAddress函数
+相关链接： https://msdn.microsoft.com/zh-cn/library/64tkc9y5.aspx
+
+GetProcAddress函数检索指定的动态链接库(DLL)中的输出库函数地址。
+
+
+vc函数功能描述/GetProcAddress
+GetProcAddress函数检索指定的动态链接库(DLL)中的输出库函数地址。 
+
+函数原型： 
+FARPROC GetProcAddress( 
+HMODULE hModule, // DLL模块句柄 
+LPCSTR lpProcName // 函数名 
+);
+
+参数/GetProcAddress 编辑
+hModule 
+[in] 包含此函数的DLL模块的句柄。LoadLibrary、AfxLoadLibrary 或者GetModuleHandle函数可以返回此句柄。 
+
+lpProcName 
+[in] 包含函数名的以NULL结尾的字符串，或者指定函数的序数值。如果此参数是一个序数值，它必须在一个字的底字节，高字节必须为0。 
+
+返回值： 
+如果函数调用成功，返回值是DLL中的输出函数地址。 
+如果函数调用失败，返回值是NULL。得到进一步的错误信息，调用函数GetLastError。
