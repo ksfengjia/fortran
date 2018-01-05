@@ -1,2 +1,7 @@
 1. 	数组传递方式 建议采用：假定形状参数(assumed-shape arrays)
 	注意:这种方式需要显示接口
+
+2.	atan()
+	功能: 反正切函数(C++)
+	用法: double atan(double x);
+	pi = 4.0*atan(1.0)
