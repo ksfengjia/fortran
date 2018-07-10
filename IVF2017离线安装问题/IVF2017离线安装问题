@@ -1,0 +1,9 @@
+IVF离线安装出现：'package signature verification failed'
+解决方案：
+URL： https://software.intel.com/zh-cn/node/713638?language=en
+URL： https://software.intel.com/en-us/articles/intel-parallel-studio-xe-installation-failure-package-signature-verification-failed?language=de
+主要是由于离线安装，缺少证书认证
+The system either does not have access to the Internet, or if it does, Windows Update cannot acquire the needed certificates.  In either case, the needed certificates will need to be downloaded and installed separately.  Two certificates are needed; one to verify the digital signature, and another to verify the timestamp. 
+	The 'AddTrust External CA Root' certificate is needed to verify the digital signature and may be obtained here.
+	The 'QuoVadis Root Certification Authority' certificate is needed to verify the timestamp and may be obtained here.
+证书：quovadis_rca_der.cer和addtrustexternalcaroot.crt，需要被放到受信任的根证书颁发机构
