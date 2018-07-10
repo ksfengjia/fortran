@@ -1,0 +1,7 @@
+ISO_FORTRAN_ENV模块
+	fortran2003包括一个新的内置模块iso_fortran_env，其中定义了一些平台无关的环境常量，如：
+	input_unit / output_unit / error_unit -- 标准输入、标准输出、标准错误的文件代号
+	iostat_end -- 当达到文件结尾时，read语句的iostat关键字返回的值，可用于判断是否到达文件尾
+	iostat_eor -- 当到达记录结尾时，read语句的iostat关键字返回的值，可用于判断记录是否结束
+	
+另外，fortran2003还提供了两个函数is_iostat_end()和is_iostat_eor()用于判断某整数是否等于文件结尾和记录结尾标志。
