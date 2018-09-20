@@ -1,0 +1,26 @@
+假设你已经装好IVF了。
+
+以用lapack为例，具体步骤如下
+第一步
+	项目（你创建的Project）——属性——fortran——libraries——use MKL——yes
+
+	在Microsoft Visual Studio的library属性里把 use Intel Math Kernel Library 加上就可以了，在其下拉菜单中随便选一个就行，除了NO。
+
+第二步 （为了使用Fortran95接口）
+
+	项目——属性——链接器(Linker)——输入(Input)——Additional Dependencies 中输入 mkl_lapack95.lib  (x86)
+	mkl_blas95_ilp64.lib mkl_lapack95_ilp64.lib  (x64)
+
+	在 Visual Studio 中，打开工程属性（在工程上右键，属性），然后展开 链接器(Linker) 设置，输入(Input)，在 Additional Dependencies 中输入 mkl_lapack95.lib。
+
+第三步 
+
+	代码中加入 USE MKL95_LAPACK(x86) 
+	http://blog.sciencenet.cn/blog-2827784-927640.html   (x64)
+	USE f95_precision, ONLY: WP => SP
+	USE lapack95, ONLY: GESVD
+
+注意
+
+设置后，rebuild project
+
