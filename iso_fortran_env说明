@@ -5,3 +5,80 @@ ISO_FORTRAN_ENV模块
 	iostat_eor -- 当到达记录结尾时，read语句的iostat关键字返回的值，可用于判断记录是否结束
 	
 另外，fortran2003还提供了两个函数is_iostat_end()和is_iostat_eor()用于判断某整数是否等于文件结尾和记录结尾标志。
+
+URL： http://fortranwiki.org/fortran/show/iso_fortran_env（可采用google翻译）
+描述
+iso_fortran_env是一个内部模块，它提供以下常量，派生类型和与Fortran环境相关的内部过程：
+
+标准
+Fortran 2003，扩展到Fortran 2008和TS 18508
+
+命名常量
+atomic_int_kind
+默认类型的整数常量，在定义原子操作中使用的整数变量时用作种类参数。（Fortran 2008或更高版本。）
+
+atomic_logical_kind
+默认类型的整数常量，在定义原子操作中使用的逻辑变量时用作种类参数。（Fortran 2008或更高版本。）
+
+character_kinds
+排名为1的默认类型整数常量数组，包含受支持的类型参数character。（Fortran 2008或更高版本。）
+
+character_storage_size
+字符存储单元的大小（以位为单位）。（Fortran 2003或更高版本。）
+
+error_unit
+用于错误报告的单元号（stderr）。（Fortran 2003或更高版本。）
+
+file_storage_size
+文件存储单元的大小（以位为单位）。（Fortran 2003或更高版本。）
+
+input_unit
+用于输入的单位号（stdin）。（Fortran 2003或更高版本。）
+
+int8, int16, int32, int64
+种类型参数，用于指定integer存储大小为16,32和64位的类型。如果目标平台不支持特定类型，则为负。（Fortran 2008或更高版本。）
+
+integer_kinds
+排名为1的默认类型整数常量数组，包含受支持的类型参数integer。（Fortran 2008或更高版本。）
+
+iostat_end
+iostat=如果在read语句期间发生文件结束条件，则分配给说明符的值。（Fortran 2003或更高版本。）
+
+iostat_eor
+iostat=如果在read语句期间发生记录结束条件，则分配给说明符的值。（Fortran 2003或更高版本。）
+
+iostat_inquire_internal_unit
+标量默认整数常数，通过使用inquire用于iostat=说明符来表示的一个单元号识别的内部单元。（Fortran 2008或更高版本。）
+
+numeric_storage_size
+数字存储单元的大小（以位为单位）。（Fortran 2003或更高版本。）
+
+logical_kinds
+排名为1的默认类型整数常量数组，包含受支持的类型参数logical。（Fortran 2008或更高版本。）
+
+output_unit
+用于输出的单位号（stdout）。（Fortran 2003或更高版本。）
+
+real32, real64, real128
+种类型参数，用于指定存储大小为32,64和128位的REAL类型。如果目标平台不支持特定类型，则为负。（Fortran 2008或更高版本。）
+
+real_kinds
+排名为1的默认类型整数常量数组，包含受支持的类型参数real。（Fortran 2008或更高版本。）
+
+stat_locked
+标量默认 - 整数常量，用作stat=返回值，lock表示锁定变量被执行图像锁定。（Fortran 2008或更高版本。）
+
+stat_locked_other_image
+标量默认整数常量，用作stat=返回值，unlock表示锁定变量被另一个图像锁定。（Fortran 2008或更高版本。）
+
+stat_stopped_image
+stat=如果语句中的参数需要与图像同步（已启动执行终止），则使用正标量默认整数常量作为返回值。（Fortran 2008或更高版本。）
+
+stat_failed_image
+stat=如果语句中的参数需要与处于失败状态的图像进行通信，则使用正标量默认整数常量作为返回值。（TS 18508或更高版本。）
+
+stat_unlocked
+标量默认整数常量，用作stat=返回值，unlock表示锁定变量已解锁。（Fortran 2008或更高版本。）
+
+lock-type
+带有私有组件的派生类型，可与LOCK和UNLOCK语句一起使用。其类型的变量必须始终声明为coarray，并且可能不会出现在变量定义上下文中。（Fortran 2008或更高版本。）
