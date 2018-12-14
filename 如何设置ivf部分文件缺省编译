@@ -1,0 +1,4 @@
+1. 点击缺省编译文件
+2. 邮件属性
+3. general >> Exclude File From Build >> 改为YES
+4. debug和release，需单独修改

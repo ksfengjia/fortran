@@ -1,0 +1,15 @@
+Ctrl-Q              Jump to declaration of member under (text) cursor
+
+Alt-Q               List usages of element under (text) cursor
+
+Ctrl-Space          Auto-complete statement, or show completion hints in list (Intellisense)
+
+Ctrl-Alt-Q          Search all code elements in solution
+
+Ctrl-Shift-Q        Searchlist all members in current file
+
+Ctrl-Shift-Alt-Q    Search all files in solution
+
+Shift-Alt-Q         Synchronize solution explorer with currently open file
+
+Alt-F1              open an about  debug dialog (also available from Tools menu)
