@@ -3,7 +3,7 @@ title: fortran
 description: learning fortran
 author: Feng Jia
 tags: fortran
-version：1.1.1.20180104_Release
+version：1.1.2.20180104_Release
 created:  2017 Apr 10 
 modified: 2019 Jan 14
 ---
