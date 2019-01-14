@@ -1,0 +1,3 @@
+1. copy lapakc.lib blas.lib >> 工程目录/lib/
+2. 设置属性>>linker>>input>> 添加lapakc.lib blas.lib
+3. 使用fortran77语言命令：dgetrf, dgetrs

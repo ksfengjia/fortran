@@ -1,0 +1,11 @@
+Fortran CodeNav安装
+
+URL：https://marketplace.visualstudio.com/items?itemName=TiemenSchreuder.FortranCodeNav#overview
+
+环境需求：
+visual studio environment language >> English
+
+    方法参考: visual studio 2015怎么把英文界面变成中文？
+    URL:    https://jingyan.baidu.com/article/7908e85c96253daf481ad204.html
+    VS2015英文包下载地址:
+    https://www.microsoft.com/en-us/download/details.aspx?id=48157
