@@ -3,7 +3,7 @@ title: fortran
 description: learning fortran
 author: Feng Jia
 tags: fortran
-version：1.1.2.20180104_Release
+version：1.2.1.20180104_Release
 created:  2017 Apr 10 
 modified: 2019 Jan 14
 ---
@@ -21,7 +21,7 @@ modified: 2019 Jan 14
 | 3    | ExpressionEvaluation                             | 任意表达式求值Fortran程序                        |
 | 4    | Fortran CodeNav                                  | VS Fortran编码辅助工具                           |
 | 5    | hpcc&hpl                                         | 国际高性能计算机浮点数测试基准题                 |
-| 6    | IVF2017离线安装问题                              | IVF2017离线安装问题解决方案                      |
+| 6    | VS+IVF安装问题解决                               | IVF2017离线安装问题<br/>VS+IVF安装Tip            |
 | 7    | memeory_leakage                                  | Fortran内存泄露解决方法                          |
 | 8    | thcode                                           | thcode所需linux链接库                            |
 | 9    | UltraEdit_fortran高亮方法                        | UltraEdit Fortran高亮方法                        |
@@ -33,6 +33,5 @@ modified: 2019 Jan 14
 | 15   | mkl编译器设置                                    | ivf+mkl编译器设置                                |
 | 16   | obsolescence_characteristic                      | Fortran 冗余特性                                 |
 | 17   | PDF Fortran Compiler UG 17.0=1=SSG 2.0 PDF=en-US | PDF Fortran Compiler UG 17.0=1=SSG 2.0 PDF=en-US |
-| 18   | VS+IVF安装Tip                                    | 安装注意事项                                     |
-| 19   | 如何查看VS2010中VC++目录中的环境变量             | 如何查看VS2010中VC++目录中的环境变量             |
-| 20   | 如何设置ivf部分文件缺省编译                      | 缺省编译                                         |
+| 18   | 如何查看VS2010中VC++目录中的环境变量             | 如何查看VS2010中VC++目录中的环境变量             |
+| 19   | 如何设置ivf部分文件缺省编译                      | 缺省编译                                         |
