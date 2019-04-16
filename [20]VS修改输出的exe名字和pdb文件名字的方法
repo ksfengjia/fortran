@@ -1,0 +1,5 @@
+VS修改输出的exe名字和pdb文件名字的方法
+
+相关链接: 1. https://blog.csdn.net/itworld123/article/details/82900835
+
+项目属性》配置属性》常规》目标文件名》修改exe名称
