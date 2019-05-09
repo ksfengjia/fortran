@@ -1,0 +1,13 @@
+终极解决VS2015 安装失败问题，如 安装包损坏或丢失
+解决方案：
+URL:    https://blog.csdn.net/ljh081231/article/details/78892018
+
+主要是由于离线安装，缺少证书认证
+
+1.  下载证书:microsoft root certificate authority 2010.cer;
+             microsoft root certificate authority 2011.cer
+
+2.  双击证书 -- 安装证书 -- 然后按下图操作，注意一定要选择 “受信任的根证书颁发机构”
+
+3.  开始安装VS2015,双击安装程序。在安装过程中如再出现 “安装包损坏或丢失”时，先看下提示的是哪个文件，
+    然后关闭VS安装程序，打开安装包,找到那个程序，手动安装即可。安装完后，再次打开VS安装程序继续安装。
