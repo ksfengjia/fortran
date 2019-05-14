@@ -1,0 +1,16 @@
+如何下载vs2015离线语言包
+URL: https://social.msdn.microsoft.com/Forums/vstudio/en-US/95377d9c-22ff-43fc-8c10-0768f3384c25/vs-2015-language-pack-offline-installer?referrer=https://social.msdn.microsoft.com/Forums/vstudio/en-US/95377d9c-22ff-43fc-8c10-0768f3384c25/vs-2015-language-pack-offline-installer
+
+也可参见pdf
+
+
+using /layout command to download the VS 2015 English language pack, as following steps:
+	1. Download the vs_langpack .exe from:
+		https://www.microsoft.com/en-sg/download/details.aspx?id=48157
+
+	2. Run the /layout command to download full files and resource:
+		cmd命令:	vs_langpack.exe /layout
+
+	3. the package is about 156 MB:
+
+	4. You could copy the packages and vs_langpack to the machine which needs it, launch the .exe to perform a English pack installation.
